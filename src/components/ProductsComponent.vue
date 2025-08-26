@@ -118,7 +118,7 @@
                   </div>
                    <div class="col-lg-6 col-md-6 mb-3">
                     <label class="form-label">Responsible</label>
-                    <input v-model="form.responsible" type="text" class="form-control" required />
+                    <input v-model="form.responsible" type="text" class="form-control" />
                   </div>
                 </div>
                 <div class="row">
