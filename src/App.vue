@@ -10,14 +10,28 @@
         <MDBNavbarItem to="/products">
           Products
         </MDBNavbarItem>
-        <MDBNavbarItem to="/locations">
-          Locations
-        </MDBNavbarItem>
         <MDBNavbarItem to="/stock-transfers">
           Stock Transfers
         </MDBNavbarItem>
         <MDBNavbarItem to="/inventory-snapshot">
           Inventory Snapshots
+        </MDBNavbarItem>
+        <MDBNavbarItem>
+          <MDBDropdown class="nav-item" v-model="dropdown1">
+            <MDBDropdownToggle
+              tag="a"
+              class="nav-link"
+              @click="dropdown1 = !dropdown1"
+              >Configurations</MDBDropdownToggle
+            >
+            <MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+              <MDBDropdownItem to="/priority-levels">Locations</MDBDropdownItem>
+              <MDBDropdownItem to="/priority-levels">Priority Levels</MDBDropdownItem>
+              <MDBDropdownItem to="/favorite-types">Favorite Types</MDBDropdownItem>
+              <MDBDropdownItem to="/product-categories">Product Categories</MDBDropdownItem >
+              <MDBDropdownItem to="/product-types">Product Types</MDBDropdownItem >
+            </MDBDropdownMenu>
+          </MDBDropdown>
         </MDBNavbarItem>
       </MDBNavbarNav>
       <form class="d-flex input-group w-auto">

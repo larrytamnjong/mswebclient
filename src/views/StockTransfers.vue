@@ -1,7 +1,5 @@
 <template>
-  <StockTransfersComponent
-    msg="Stock Transfers Page."
-  />
+  <StockTransfersComponent/>
 </template>
 
 <script setup lang="ts">

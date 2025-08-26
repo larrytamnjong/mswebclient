@@ -11,11 +11,11 @@ const routes = [
     name: "inventory-snapshot",
     component: () => import("../views/InventorySnapshot.vue"),
   },
-  {
-    path: "/locations",
-    name: "locations",
-    component: () => import("../views/Locations.vue"),
-  },
+  // {
+  //   path: "/locations",
+  //   name: "locations",
+  //   component: () => import("../views/Locations.vue"),
+  // },
   {
     path: "/products",
     name: "products",

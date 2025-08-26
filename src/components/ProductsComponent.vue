@@ -35,8 +35,8 @@
                       <th>Favorite</th>
                       <th>Product Name</th>
                       <th>Category</th>
-                      <th>Price</th>
-                      <th>Stock</th>
+                      <th>Internal Reference</th>
+                      <th>Responsible</th>
                       <th class></th>
                     </tr>
                   </thead>
@@ -46,8 +46,8 @@
                       <td>{{ product.favorite_name }}</td>
                       <td>{{ product.name }}</td>
                       <td>{{ product.product_category_name }}</td>
-                      <td>${{ product.sales_price }}</td>
-                      <td>{{ product.quantity_on_hand }}</td>
+                      <td>{{ product.internal_reference }}</td>
+                      <td>{{ product.responsible}}</td>
                       <td class="text-end">
                         <button
                           class="btn btn-sm btn-outline-secondary me-1"
@@ -128,7 +128,7 @@
                   </div>
                   <div class="col-lg-6 col-md-6 mb-3">
                     <label class="form-label">Stock</label>
-                    <input v-model="form.quantity_on_hand" type="number" class="form-control" required />
+                    <input v-model="form.quantity_on_hand" type="number" class="form-control" />
                   </div>
                 </div>
                 <div class="row">
@@ -184,7 +184,7 @@ const loading = ref(false);
 const error = ref<string | null>(null);
 const success = ref<string | null>(null);
 
-const ALERT_TIMEOUT = 3000; // 3 seconds
+const ALERT_TIMEOUT = 3000; 
 
 const form = ref<Product>({
   favorite: null,
