@@ -77,7 +77,6 @@
                     <tr>
                       <th>#</th>
                       <th>Product</th>
-                      <th>Internal Reference</th>
                       <th>Location</th>
                       <th>Quantity</th>
                       <th>Last Updated</th>
@@ -88,7 +87,6 @@
                     <tr v-for="(item, index) in filteredInventory" :key="item.id!">
                       <td>{{ index + 1 }}</td>
                       <td>{{ item.product_name || 'N/A' }}</td>
-                      <td>{{ item.product_internal_reference || 'N/A' }}</td>
                       <td>{{ item.location_name }} ({{ item.location_code }})</td>
                       <td>
                         <span :class="{
